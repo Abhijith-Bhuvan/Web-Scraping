@@ -10,10 +10,11 @@ def get_stats_india():
     data = soup.findAll(class_='maincounter-number')
     numbers = {}
 
-    numbers['Total'] = str(data[0].contents[1].text)
-    numbers['Deaths'] = str(data[1].contents[1].text)
-    numbers['Recovered'] = str(data[2].contents[1].text)
+    numbers['Total Cases'] = str(data[0].contents[1].text)
+    numbers['Total Deaths'] = str(data[1].contents[1].text)
+    numbers['Total Recovered'] = str(data[2].contents[1].text)
 
+    print('Corona stats of India')
     for key in numbers:
         print(key, ' : ', numbers[key])
     return numbers
